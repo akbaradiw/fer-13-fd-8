@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tugas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="mb-4">
+      <button type="button" onclick="ascended()" class="btn btn-primary mt-4 ms-4">Sort By Ascending</button>
+      <button type="button" onclick="descended()" class="btn btn-primary mt-4 ms-2">Sort By Descending</button>
+    </div>
+
+    <input class="form-control me 2 mb-4 ms-4" id="gosearch" type="search" placeholder="Search" class="btn btn-primary" type="send" />
+    <button class="btn btn-primary ms-4" onclick="go()" type="send">Search</button>
+
+    <script>
+      const array = ["yanto", "axel", "jokowi", "permadi", "ganjar", "probawa"];
+
+      function ascended() {
+        const array = ["yanto", "axel", "jokowi", "permadi", "ganjar", "probawa"];
+        array.sort();
+        console.log(array);
+      }
+
+      function descended() {
+        const array = ["yanto", "axel", "jokowi", "permadi", "ganjar", "probawa"];
+        array.sort((a, b) => b - a);
+        console.log(array);
+      }
+
+      function go() {
+        const search = document.getElementById("gosearch").value;
+        const result = array.includes(search);
+
+        if (result) {
+          console.log("Ada");
+        } else {
+          console.log("Tidak ada");
+        }
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
